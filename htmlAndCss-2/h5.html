@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.moveBox {
+				width: 100px;
+				height: 10px;
+				background-color: red;
+				animation: myMove 10s inherit;
+				/*变宽动画：自定义动画名 持续时间 循环次数*/
+				/*inherit无限次循环*/
+			}
+
+			/*关键帧*/
+			/*由第一帧到最后一帧，中间计算机自动实现*/
+			@keyframes myMove {
+				from {/*关键帧的第一帧*/
+					width: 0px;
+				}
+
+				to {/*关键帧的最后一帧*/
+					width: 500px;
+				}
+			}
+
+			.trasitionBox {/*拉伸效果*/
+				width: 100px;
+				height: 100px;/*初始值，相当于第一帧*/
+				background-color: blue;
+				/* transition: width 1s; */
+				transition: height 1s;/*对高度进行拉伸，持续2s*/
+			}
+
+			.trasitionBox:hover {/*鼠标触发拉伸效果*/
+				height: 500px;/*拉伸的长度。相当于最后一帧*/
+			}
+			ul{
+				list-style: none;/*取消菜单的小点*/
+			}
+
+			li {
+				float: left;
+				margin-right: 15px;
+				padding: 5px 10px 5px 10px;
+				
+				background-color:orchid;
+				
+				-webkit-transform: skewX(30deg);/*沿X轴逆时针旋转30du*/
+
+			}
+			li:hover{
+				background-color: blueviolet;
+			}
+
+			a {
+				text-decoration: none;/*取消超链接的下划线*/
+				color: white;
+				-webkit-transform: skewX(-30deg);/*沿X轴顺时针旋转30du*/
+				display: block;
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div>移动效果：</div>
+		<div class="moveBox"></div>
+		<div>拉伸效果：</div>
+		<div class="trasitionBox"></div>
+		<div>菜单效果：</div>
+		<div>
+			<ul>
+				<li><a href="http://www.sina.com.cn" target="_blank">新浪微博</a></li>
+				<li><a href="http://toutiao.com">今日头条</a></li>
+				<li><a href="http://baidu.com">百度新闻</a></li>
+				<li><a href="http://baidu.com">凤凰卫视</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

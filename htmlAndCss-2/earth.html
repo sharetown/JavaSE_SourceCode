@@ -1,0 +1,28 @@
+<!DOCTYPE html>     
+<html>     
+<head>     
+    <meta charset="UTF-8">     
+	<title>旋转地球</title>
+	<style>
+		.earth{
+			width: 310px;
+			height: 310px;
+			background: url(img/earth.png) no-repeat;
+			margin: 0 auto;
+			margin-top: 150px;
+			border-radius: 50%;
+			-webkit-animation: xunzhuan 10s linear 0s infinite;
+		}
+		@-webkit-keyframes xunzhuan{
+			from{-webkit-transform: rotate(0deg);}
+			to{-webkit-transform: rotate(360deg);}
+		}
+		.earth:hover{
+			-webkit-animation-play-state: paused;
+		}
+	</style>
+</head>     
+<body>     
+    <div class="earth"></div>     
+</body>
+</html> 
