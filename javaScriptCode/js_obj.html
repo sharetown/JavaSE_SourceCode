@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Js动态添加属性和方法</title>
+		<script>
+			var person={
+				//静态定义属性
+				name:"dasd",
+				age:45,
+				
+				//静态定义方法
+				nameToUp:function(){
+					return this.name.toUpperCase()
+				}
+			}
+			console.log("name:"+person.name)
+			console.log("age:"+person.age)
+			console.log(person.nameToUp())
+			//动态扩充属性
+			person.school="黔南民族师范学院"
+			console.log("school"+person.school)
+			
+			//动态扩充方法
+			person.abc=function(){
+				return this.name+"abc"//调用对象的属性需要加this关键字
+			}
+			console.log(person.abc())
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

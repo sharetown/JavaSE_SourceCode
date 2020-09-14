@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js对象</title>
+		<script>
+			//创建对象，设置一个属性，扩充属性
+			var person={
+				name:"abc",
+				age:18,
+				toString:function(){
+					return this.name+this.age
+				}
+			}
+			person.toUpperCase=function(){
+				return this.name.toUpperCase()
+			}
+			console.log(person.toString())
+			console.log(person)//以日志格式打印
+			console.table(person)//以表格样式打印
+			alert(person)//弹出整个对象
+			alert(person.name)//获取对象的值弹出
+			console.log(person.toUpperCase())
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

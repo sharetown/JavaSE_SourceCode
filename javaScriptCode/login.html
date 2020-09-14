@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				margin: 20px;
+			}
+			
+			label{
+				display: inline-block;
+				width: 65px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<label>用户名</label>
+			<input type="text" id="username" />
+		</div>
+		
+		<div>
+			
+			<label>密码</label>
+			<input type="password" id="password" />
+		</div>
+		
+		<div style="margin:20px 0px 0px 100px;">
+			<input type="submit" value="登陆" onclick="denLu()" />
+			<input type="button" value="清空" onclick="clc()" />
+		</div>
+		
+	</body>
+	<script>
+		var userName = document.getElementById("username")
+		var pwd = document.getElementById("password")
+		
+		function denLu() {
+			alert(userName.value + "\n" + pwd.value)
+			console.log(userName)
+			console.log(pwd)
+		}
+		
+		function clc() {
+			userName.value = ""
+			pwd.value = ""
+		}
+	</script>
+</html>

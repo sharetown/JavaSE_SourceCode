@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body onload="setInterval(getDate,1000)">
+		<div id="enclock"></div>
+	</body>
+	
+	
+<!-- 	<script>
+		//获取系统时间
+		var date=new Date()
+		
+		//获取id的doc对象
+		var en=document.getElementById("enclock")
+		
+		//传入值
+		en.innerText=date
+	</script> -->
+	
+	<script>
+		function getDate(){
+			//获取系统时间
+			var date=new Date()
+			
+			//获取id的doc对象
+			var en=document.getElementById("enclock")
+			
+			//传入值
+			en.innerText=date
+		}
+	</script>
+</html>

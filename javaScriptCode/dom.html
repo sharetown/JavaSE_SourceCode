@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript脚本语言案例</title>
+	</head>
+	<body>
+		<h1 id="a">JavaScript脚本语言 之 DOM树</h1>
+		<a href="http://www.baidu.com" name="baidu" id="bai">百度</a>
+		<a href="http://www.taobao.com" class="tao">淘宝</a>
+		<a href="http://www.jingdong.com">京东</a>
+		<a href="http://www.pinduoduo.com">拼多多</a>
+		<button onclick="alert(document.getElementsByTagName('a').length)">链接个数</button>
+		<button onclick="alert(document.getElementsByName('baidu')[0])">百度地址</button>
+		<button onclick="alert(document.getElementsByClassName('tao')[0])">淘宝地址</button>
+		<button onclick="alert(document.getElementById('bai').innerText)">百度名字</button>
+	</body>
+	<!-- <script>
+		window.alert(document.title)//弹出框
+		//默认windows下的对象是可以直接调用的
+		alert(123)
+		
+		//获取h1标签内容
+		var hi=document.getElementsByTagName('h1')
+		alert(hi[0].innerText)//获取数组里的内容
+		
+		
+	</script> -->
+</html>

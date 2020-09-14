@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>计时器</title>
+		<style>
+			#msg{
+				margin: 50px 0px 10px 100px;
+			}
+			.wai{
+				margin-top: 20px;
+				margin-left: 35px;
+			}
+			#btnStart{
+				float: left;
+			}
+			#btnStop{
+				margin-left: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="msg">0</div>
+		<div class="wai">
+			<button id="btnStart" onclick="start()">开始计时</button>
+			<button id="btnStop" onclick="stop()">结束计时</button>
+		</div>
+	</body>
+	<script>
+		var btnStart=document.getElementById("btnStart")
+		var msg=document.getElementById("msg")
+		var count=0
+		var num=0
+		var flag
+		function start(){
+			if(count%2==0){
+				btnStart.innerText="暂停计时"
+				flag=setInterval(function(){
+					num+=1
+					msg.innerText=num
+				},500)
+				count=count+1
+			}else{
+				clearInterval(flag)
+				btnStart.innerText="继续计时"
+				count=count+1
+			}
+			
+		}
+		
+		function stop(){
+			clearInterval(flag)
+			btnStart.innerText="开始计时"
+			msg.innerText=0
+			
+			
+			
+		}
+
+	</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				margin: 20px;
+			}
+			/* 默认情况下lable和span标签设置宽度是无效的 block块方式会换行,所以设置为inline-block宽度才有效 */
+			label{
+				width: 80px;
+				display: inline-block;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="msg"></div>
+		<div>
+			<label>用户名</label>
+			<input type="text" id="username"/>
+		</div>
+		
+		<div>
+			<label>密码</label>
+			<input type="password" id="password" />
+		</div>
+		<div>
+			<input type="submit" value="登录" />
+			<input type="button" value="清除"/> 
+		</div> 
+	</body> 
+	<!-- <script>
+		//后期绑定，给按钮增加onclick事件
+		var btnLogin = document.getElementById('btnLogin');
+		btnLogin.addEventListener('click', function(){
+		doLogin();
+		});
+		
+		var btnClear = document.getElementById('btnClear');
+		btnClear.addEventListener('click', function(){
+		doClear();
+		})			
+	</script> -->
+	<!-- <script>
+		//展示登录成功信息
+		function doLogin(){
+			var msg = document.getElementById("msg");
+			var username = document.getElementById("username");
+			var password = document.getElementById("password");				
+			alert( "用户名："+username.value+"，密码："+password.value );
+			msg.innerHTML = "<font color='red'>登录成功</font><div>欢迎："+username.value+"</div>";
+		}
+		
+		//获取页面所有的input框，是text和password框，内容=空串
+		function doClear(){
+			var inputs = document.getElementsByTagName("input");
+			for(var i=0; i<inputs.length; i++){
+				if(inputs[i].type=='text' || inputs[i].type=='password'){
+					inputs[i].value = '';
+				}
+			}
+		}
+	</script> -->
+</html>
