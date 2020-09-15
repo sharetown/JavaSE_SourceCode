@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="msg">学习jQuery实现div中字体变大、变色</div>
+		<button id="btn">立即支付</button>
+		<div style="margin: 20px;">
+			<input type="checkbox" id="ck" />red
+			<input type="checkbox" id="ck" />green
+			<input type="checkbox" id="ck" />blue
+			<button id="all">全选</button>
+			<button id="clc">取消</button>
+		</div>
+	</body>
+	<script>
+		//获取div对象，设置css样式，改变字体的大小
+		$("#msg").css("font-size",36)//样式：font-size:36
+		$("#msg").css("color","green")//样式：color:green
+		$("#btn").click(function(){
+			$("#btn").prop("disabled",true)//禁止按钮,true不能点击，false可以点击
+		})
+		$("#all").click(function(){
+			$("[id=ck]").prop("checked",true)//[]  jquery的id选择器
+		})
+		$("#clc").click(function(){
+			$("[id=ck]").prop("checked",false)
+		})
+	</script>
+</html>
